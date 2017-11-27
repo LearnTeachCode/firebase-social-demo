@@ -1,0 +1,20 @@
+body, input, button {
+  font-size: 20px;
+  font-family: "Helvetica", sans-serif;
+}
+
+button {
+  margin: 1em 0;
+}
+
+#displayname {
+  font-weight: bold;
+}
+
+#notif {
+  display: none;
+  color: red;
+  font-weight: bold;
+  padding: 1em;
+  border: 1px solid red;
+}
