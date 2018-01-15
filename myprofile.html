@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study Buddies: Meet New Study Partners! (Firebase Demo App)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js" defer></script>
+    <script src="/userprofile.js" defer></script>
+  </head>
+  <body>
+    
+    <header id="header">
+      <div class="vertical-center">
+        <h1 id="title">Study Buddies: Meet New Study Partners!</h1>
+
+        <div id="controls">          
+          <button class="button back-button"><a href="/">Back to Homepage</a></button>
+
+          <button id="logout-button" class="button">Logout</button>
+        </div>
+      </div>
+    </header>
+    
+    <div class="notif" id="notif">
+      <p>You must log in first before you can set up your user profile!</p>
+      <p><button id="login-button" class="button">Signup / Login</button></p>
+    </div>
+
+    <div class="notif" id="notif-success">
+      <p>Your profile has been updated! Now meet your new study partners:</p>
+      <p><button class="button"><a href="/">Back to Homepage</a></button></p>
+    </div>
+    
+    <div id="profile">
+      
+      <h1>Your Profile</h1> 
+      
+      <p>              
+        <span>Your Display Name:</span>
+        <input type="text" id="displayname">
+      </p>
+      
+      <p>              
+        <span>Your Email Address:</span>
+        <input type="text" id="email">
+      </p>
+
+      <p>Your Profile Photo (Edit on GitHub):</p>
+      <img id="profilephoto" class="profilephoto" width="200" src="#">
+
+      <p>              
+        <span>What's your favorite programming language?</span>
+        <input type="text" id="favlanguage">
+      </p>
+
+      <button id="update" class="button" style="display:block;">Create / Update Your Profile</button>    
+
+    </div>
+    
+  </body>
+</html>
