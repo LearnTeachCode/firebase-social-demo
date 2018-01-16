@@ -1,7 +1,7 @@
 // REPO SAVED HERE: https://github.com/LearnTeachCode/firebase-social-demo/tree/master
 
 ///////////////////////   Initialize Firebase   //////////////////////////////
-var config = {
+let config = {
     apiKey: "AIzaSyDT03tSsnQ81nI-Se4lcEFDeYHbfcIoqvQ",
     authDomain: "test-12-93e5b.firebaseapp.com",
     databaseURL: "https://test-12-93e5b.firebaseio.com",
@@ -12,7 +12,7 @@ var config = {
 
 firebase.initializeApp(config);
 
-var provider = new firebase.auth.GithubAuthProvider();
+let provider = new firebase.auth.GithubAuthProvider();
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -77,13 +77,13 @@ firebase.auth().onAuthStateChanged(function(){
     profileElem.style.display = "block";
         
     // Save a reference object that represents the current user's location in our database:
-    var currentUserRef = firebase.database().ref("users/" + currentUser.uid);  
+    let currentUserRef = firebase.database().ref("users/" + currentUser.uid);  
 
     // Listen for current user's profile info (initialize it and also update in real-time when it changes!)
     currentUserRef.on("value", function(dataSnapshot) {
       
       // Extract user's raw data into an object we can easily use, with the Firebase data snapshot's .val() function
-      var userDataSnapshot = dataSnapshot.val();
+      let userDataSnapshot = dataSnapshot.val();
             
       // If current user DOES exist in the database (this is their 2nd+ time logging in)
       if (userDataSnapshot) {
@@ -135,7 +135,7 @@ function updateUser() {
     
     // Create object for this user's data
     // (pulling values from input boxes and from Firebase user object)
-    var newUserData = {
+    let newUserData = {
       displayName: displayNameElem.value,
       email: emailElem.value,
       photoURL: user.photoURL,
@@ -143,7 +143,7 @@ function updateUser() {
     };
     
     // Save a reference object that represents the current user's location in our database
-    var userIdRef = firebase.database().ref("users/" + currentUser.uid);
+    let userIdRef = firebase.database().ref("users/" + currentUser.uid);
     
     // Create or update this user's data in Firebase, and then
     // after that happens, run our function named finishUpdatingProfile

@@ -2,7 +2,7 @@
 
 ///////////////////////   Initialize Firebase   //////////////////////////////
 // Initialize Firebase
-var config = {
+let config = {
     apiKey: "AIzaSyDT03tSsnQ81nI-Se4lcEFDeYHbfcIoqvQ",
     authDomain: "test-12-93e5b.firebaseapp.com",
     databaseURL: "https://test-12-93e5b.firebaseio.com",
@@ -13,12 +13,12 @@ var config = {
 
 firebase.initializeApp(config);
 
-var provider = new firebase.auth.GithubAuthProvider();
+let provider = new firebase.auth.GithubAuthProvider();
 
 /////////////////////////////////////////////////////////////////////////////
 
 // Convert HTML elements to JS objects
-var usersListElement = document.getElementById('userslist'),
+let usersListElement = document.getElementById('userslist'),
     loginButton = document.getElementById('login-button'),
     logoutButton = document.getElementById('logout-button'),
     profileButton = document.getElementById('profile-button'),
@@ -114,7 +114,7 @@ function setupUsersList() {
 function displayUser(userSnapshot) {
     
    // Extract our JSON style user data from Firebase's data snapshot using the Firebase .val() method
-   var user = userSnapshot.val();
+   let user = userSnapshot.val();
   
     // CREATE NEW HTML ELEMENTS:
     // <section> 
@@ -123,11 +123,11 @@ function displayUser(userSnapshot) {
     //   <p class="favlanguage">...</p>
     // </section>
 
-    var userSectionElement = document.createElement("section");
-    var userNameElement = document.createElement("h2");
-    var userEmailElement = document.createElement("p");
-    var userImageElement = document.createElement("img");
-    var userLangElement = document.createElement("p");
+    let userSectionElement = document.createElement("section");
+    let userNameElement = document.createElement("h2");
+    let userEmailElement = document.createElement("p");
+    let userImageElement = document.createElement("img");
+    let userLangElement = document.createElement("p");
     
     // Set class names on the HTML elements (we use these to apply CSS rules from styles.css file based on class names)
     userSectionElement.className = "profile-section";
